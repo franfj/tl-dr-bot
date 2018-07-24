@@ -6,6 +6,7 @@ from text_summarizer import summarizer
 def summarize_reply(bot, update):
     return summarizer.schematize(update.message.reply_to_message.text)
 
+
 def start_message(bot, update):
     bot.sendMessage(chat_id=update.message.chat_id, text='Text summarization bot. Done by Fran Rodrigo.')
 
@@ -22,7 +23,7 @@ def percentage_message(bot, update):
                 bot.sendMessage(chat_id=update.message.chat_id, text='Percentage setted :)')
 
         except ValueError:
-                bot.sendMessage(chat_id=update.message.chat_id, text=error_msg)
+            bot.sendMessage(chat_id=update.message.chat_id, text=error_msg)
 
     else:
         bot.sendMessage(chat_id=update.message.chat_id, text=error_msg)
