@@ -13,6 +13,7 @@ def tldr_message(bot, update):
         bot.sendMessage(chat_id=update.message.chat_id,
                         text=summarizer.schematize(text))
 
+
 with open('token.txt') as f:
     token = f.readlines()[0]
 
@@ -24,7 +25,5 @@ dispatcher.add_handler(start_handler)
 
 tldr_handler = CommandHandler('tldr', tldr_message)
 dispatcher.add_handler(tldr_handler)
-
-
 
 updater.start_polling()
