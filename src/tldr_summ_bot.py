@@ -3,6 +3,9 @@ from telegram.ext import Updater
 from text_summarizer import summarizer
 
 
+def summarize_reply(bot, update):
+    return summarizer.schematize(update.message.reply_to_message.text)
+
 def start_message(bot, update):
     bot.sendMessage(chat_id=update.message.chat_id, text='Text summarization bot. Done by Fran Rodrigo.')
 
@@ -26,6 +29,9 @@ def percentage_message(bot, update):
 
 
 def tldr_message(bot, update):
+    if update.message.reply_to_message is not None:
+        bot.sendMessage(chat_id=update.message.chat_id, text=summarize_reply(bot, update))
+
     if len(update.message.text) > 5:
         text = update.message.text[6:].encode('utf-8')
         summ = summarizer.schematize(text)
