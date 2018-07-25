@@ -1,4 +1,7 @@
+from StringIO import StringIO
 from urllib2 import urlopen
+
+from PyPDF2 import PdfFileReader
 from bs4 import BeautifulSoup
 from bs4.element import Comment
 
@@ -20,7 +23,6 @@ class UrlGrabber(object):
 
         return True
 
-
     @staticmethod
     def text_from_html(body):
         soup = BeautifulSoup(body, 'html.parser')
@@ -37,3 +39,11 @@ class UrlGrabber(object):
     def get_text_from_url(url):
         html = urlopen(url).read()
         return UrlGrabber.text_from_html(html)
+
+    @staticmethod
+    def get_text_from_first_page_pdf(text):
+        remote_file = urlopen(text).read()
+        memory_file = StringIO(remote_file)
+        pdf_file = PdfFileReader(memory_file)
+        first_page = pdf_file.getPage(0).extractText().strip().encode('utf-8')
+        return first_page
