@@ -8,6 +8,12 @@ class PercentageHandler(object):
 
     @staticmethod
     def percentage_message(bot, update):
+        """
+        Respond to /pct messages
+        :param bot: The bot instance
+        :param update: The message received
+        :return: The response
+        """
         # Set error message
         error_msg = 'Incorrect value. Please send a floating point number in the range [0 - 1] (i.e. 0.5).'
 
