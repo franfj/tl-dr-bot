@@ -9,4 +9,4 @@ Telegram bot capable of summarizing messages / multimedia contents (in developme
 - python-telegram-bot
 - text-summarization
 - validators
-- Beautiful soap
+- Beautiful soup
