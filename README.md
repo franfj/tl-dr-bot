@@ -6,6 +6,7 @@ Telegram bot capable of summarizing messages / multimedia contents (in developme
 - Run :)
 
 #### Packages needed
+- python-telegram-bot
 - text-summarization
 - validators
 - Beautiful soap
