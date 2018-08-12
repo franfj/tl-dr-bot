@@ -11,6 +11,8 @@ Telegram bot capable of summarizing messages / multimedia contents (in developme
 - validators
 - Beautiful soup
 - iso639
+- requests
+- python-firebase
 
 #### License
 
