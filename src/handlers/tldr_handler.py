@@ -1,9 +1,13 @@
 import os
 
 import validators
+from firebase import firebase
 from text_summarizer import summarizer
 
+from src import FIREBASE_URL
 from tools import UrlGrabber
+
+DEFAULT_PCT = 0.15
 
 
 class TldrHandler(object):
@@ -19,6 +23,15 @@ class TldrHandler(object):
         :param update: The message received
         :return: The response
         """
+
+        user_id = update.message.from_user.id
+
+        db = firebase.FirebaseApplication(FIREBASE_URL, None)
+        try:
+            summarizer.percentage = db.get(str(user_id), None).items()[0][1]
+        except:
+            summarizer.percentage = DEFAULT_PCT
+
         # Summarize reply messages
         if update.message.reply_to_message is not None:
             bot.sendMessage(chat_id=update.message.chat_id, text=TldrHandler.summarize_reply(update))

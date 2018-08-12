@@ -12,4 +12,3 @@ class StartHandler(object):
         :return: The response
         """
         bot.sendMessage(chat_id=update.message.chat_id, text='Text summarization bot. Done by Fran Rodrigo.')
-

@@ -1,14 +1,11 @@
 from telegram.ext import CommandHandler
 from telegram.ext import Updater
 
+from get_resources_info import BOT_TOKEN
 from handlers import StartHandler, PercentageHandler, TldrHandler
 
-# Open token file
-with open('../resources/token.txt') as f:
-    token = f.readlines()[0]
-
 # Init updater & dispatcher
-updater = Updater(token=token)
+updater = Updater(token=BOT_TOKEN)
 dispatcher = updater.dispatcher
 
 # Add handlers to dispatcher

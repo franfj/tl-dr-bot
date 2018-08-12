@@ -1,0 +1,2 @@
+from get_resources_info import BOT_TOKEN
+from get_resources_info import FIREBASE_URL
