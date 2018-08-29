@@ -1,4 +1,6 @@
 # tl;dr bot
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Ffranfj%2Ftl-dr-bot.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Ffranfj%2Ftl-dr-bot?ref=badge_shield)
+
 Telegram bot capable of summarizing messages / multimedia contents (in development).
 
 #### How to use
@@ -27,3 +29,6 @@ GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Ffranfj%2Ftl-dr-bot.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Ffranfj%2Ftl-dr-bot?ref=badge_large)
