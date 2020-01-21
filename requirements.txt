@@ -28,4 +28,4 @@ tools == 0.1.9
 toran == 0.0.1
 
 # src/handlers/tldr_handler.py: 3
-validators == 0.12.2
+validators == 0.12.6
