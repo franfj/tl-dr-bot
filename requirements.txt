@@ -2,7 +2,7 @@
 # https://github.com/damnever/pigar
 
 # src/handlers/tools/grab_url_text.py: 4
-PyPDF2 == 1.26.0
+PyPDF2 == 1.27.5
 
 # src/handlers/tools/grab_url_text.py: 5,6
 bs4 == 0.0.1
